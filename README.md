@@ -1,6 +1,16 @@
 # rustify — Python/C → Rust, token-efficiently
 
+[![GitHub stars](https://img.shields.io/github/stars/Emiliosbs/rustify?style=social)](https://github.com/Emiliosbs/rustify/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Examples](https://img.shields.io/badge/examples-6%20pairs-blue)](examples/)
+![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-blueviolet)
+![Works with OpenCode](https://img.shields.io/badge/works%20with-OpenCode-orange)
+
 > An AI-agent skill that converts Python or C source code into **idiomatic, compiling Rust** using the **fewest possible output tokens**.
+
+**Instant setup — paste this into any agent with shell access:**
+
+> Install the `py-c-to-rust` skill from https://github.com/Emiliosbs/rustify: clone the repo, place `SKILL.md` in your skills directory under `py-c-to-rust/` (e.g. `~/.claude/skills/py-c-to-rust/`), the reference `.md` files under `references/`, and `emit_skeleton.sh` (executable) under `scripts/`. Verify the frontmatter parses and all referenced paths exist, then confirm with a one-sentence summary of the DME pipeline.
 
 ## What is this?
 
@@ -31,6 +41,7 @@ Before finalizing, the skill runs a mental compile-self-check: every `&` has a c
 ```
 rustify/
 ├── SKILL.md                      # The skill: mission, DME pipeline, emit rules, 6 worked examples
+├── examples/                     # 6 before/after conversion pairs (Python/C in, Rust out)
 ├── references/
 │   ├── python_to_rust.md         # Python→Rust tables: types, collections, classes, errors, async, stdlib, NumPy
 │   ├── c_to_rust.md              # C→Rust tables + pointer-ownership inference procedure (Crown-style)
@@ -38,6 +49,7 @@ rustify/
 │   └── token_efficiency.md       # 20 hard compression rules + canonical output shape
 ├── scripts/
 │   └── emit_skeleton.sh          # Scaffolds a minimal Cargo crate (skip boilerplate emission)
+├── LICENSE                       # MIT
 └── README.md
 ```
 
@@ -80,6 +92,12 @@ Convert this to Rust: <paste Python or C code>
 ```
 
 Trigger phrases: "convert to Rust", "rewrite in Rust", "port to Rust", "make this Rust", "Rust equivalent of" — or simply show Python/C code and ask for Rust.
+
+More before/after pairs live in [examples/](examples/).
+
+## License
+
+MIT — see [LICENSE](LICENSE).
 
 ## Install it yourself (agent prompt)
 

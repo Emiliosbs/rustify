@@ -5,6 +5,7 @@
 [![Examples](https://img.shields.io/badge/examples-6%20pairs-blue)](examples/)
 ![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-blueviolet)
 ![Works with OpenCode](https://img.shields.io/badge/works%20with-OpenCode-orange)
+[![Rustify: Token-Efficient Python/C to Rust Conversion](https://repoclip.io/api/badge/90400109-255a-4d64-a73e-005b2f24d556)](https://repoclip.io/v/90400109-255a-4d64-a73e-005b2f24d556)
 
 > An AI-agent skill that converts Python or C source code into **idiomatic, compiling Rust** using the **fewest possible output tokens**.
 
